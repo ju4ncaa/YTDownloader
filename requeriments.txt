@@ -1,3 +1,2 @@
-phonenumbers 
-geopy
-pytz
+customtkinter
+pytube
