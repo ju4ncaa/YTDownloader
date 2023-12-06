@@ -12,7 +12,6 @@ Verify that you have all the necessary modules installed using the command:
 pip3 install -r requirements.txt
 ```
 ## Usage
-## Usage
 1. Clone this repository or download the ytdownloader.py script.
 ```
 git clone https://github.com/0xJuaNc4/YTDownloader
