@@ -43,6 +43,7 @@ def download_video():
             print(f"\n{Colors.YELLOW}[*]{Colors.RESET} Obtaining the highest video resolution...")
         else:
             print(f"\n{Colors.RED}[!]{Colors.RESET} The format you have entered is not valid, it must be mp3 or mp4.")
+            return
         sleep(2)
         print(f"\n{Colors.YELLOW}[*]{Colors.RESET} Downloading {Colors.YELLOW}{yt.title}{Colors.RESET}...")
         stream.download(output_path=f"{getcwd()}/Downloads", filename=f"{yt.title}.{extension}")
