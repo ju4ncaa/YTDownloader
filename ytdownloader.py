@@ -31,11 +31,21 @@ def download_video():
         print(f"\n{Colors.YELLOW}[*]{Colors.RESET} Loading video...")
         sleep(2)
         print(f"\n{Colors.GREEN}[*]{Colors.RESET} Video {Colors.YELLOW}{yt.title}{Colors.RESET} loaded!")
-        video_stream = yt.streams.get_highest_resolution()
-        print(f"\n{Colors.YELLOW}[*]{Colors.RESET} Obtaining the highest video resolution...")
+        print(f"\n{Colors.YELLOW}[*]{Colors.RESET} Available download formats\n\n{Colors.YELLOW}1){Colors.RESET} mp3\n{Colors.YELLOW}2){Colors.RESET} mp4")
+        user_choice = input(f"\n{Colors.YELLOW}[*]{Colors.RESET} Choose the video format: ")
+        if user_choice.lower() == "mp3":
+            stream = yt.streams.filter(only_audio=True).first()
+            extension = "mp3"
+            print(f"\n{Colors.YELLOW}[*]{Colors.RESET} Obtaining the highest audio quality...")
+        elif user_choice.lower() == "mp4":
+            stream = yt.streams.get_highest_resolution()
+            extension = "mp4"
+            print(f"\n{Colors.YELLOW}[*]{Colors.RESET} Obtaining the highest video resolution...")
+        else:
+            print(f"\n{Colors.RED}[!]{Colors.RESET} The format you have entered is not valid, it must be mp3 or mp4.")
         sleep(2)
         print(f"\n{Colors.YELLOW}[*]{Colors.RESET} Downloading {Colors.YELLOW}{yt.title}{Colors.RESET}...")
-        video_stream.download(f"{getcwd()}/Downloads")
+        stream.download(output_path=f"{getcwd()}/Downloads", filename=f"{yt.title}.{extension}")
         sleep(2)
         print(f"\n{Colors.GREEN}[*]{Colors.RESET} Download completed!")
         sleep(1)
