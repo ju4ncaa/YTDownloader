@@ -35,11 +35,11 @@ def download_video():
         print(f"\n{Colors.YELLOW}[*]{Colors.RESET} Obtaining the highest video resolution...")
         sleep(2)
         print(f"\n{Colors.YELLOW}[*]{Colors.RESET} Downloading {Colors.YELLOW}{yt.title}{Colors.RESET}...")
-        video_stream.download(getcwd())
+        video_stream.download(f"{getcwd()}/Downloads")
         sleep(2)
         print(f"\n{Colors.GREEN}[*]{Colors.RESET} Download completed!")
         sleep(1)
-        print(f"\n{Colors.YELLOW}[*]{Colors.RESET} Video saved in {Colors.YELLOW}{getcwd()}{Colors.RESET}\n")
+        print(f"\n{Colors.YELLOW}[*]{Colors.RESET} Video saved in {Colors.YELLOW}{getcwd()}/Downloads{Colors.RESET}\n")
     except Exception as e:
         print(f"\n{Colors.RED}[!]{Colors.RESET} Error: {str(e)}\n")
 
