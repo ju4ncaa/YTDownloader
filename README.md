@@ -4,7 +4,7 @@
   <img src="https://github.com/0xJuaNc4/YTDownloader/assets/130152767/5228cb89-113f-42f3-85d2-8962f4f57f47" width="250px">
 </div>
 
-This is a simple command-line YouTube downloader script written in Python. It utilizes the pytube library to download YouTube videos with the highest available resolution.
+This is a simple command line script to download YouTube videos written in Python. It uses the pytube library to download YouTube videos in mp3 and mp4 format with the highest quality.
 
 ## Requirements
 Verify that you have all the necessary modules installed using the command:
